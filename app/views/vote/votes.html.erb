@@ -1,0 +1,23 @@
+<% content_for :head do %>
+	<h1><%= @title %></h1>
+<% end%>
+
+<div id="votes">
+<p><strong>What's your favourite group?</strong></p>
+<form action='cast' method='post'>
+    <ul class='unstyled'>
+      <% $Choices.each do |id, text| %>
+      <li>
+		<label class='radio'>
+            <input type='radio' name='vote' value='<%= id %>' id='vote_<%= id %>' />
+            <%= text %>
+        </label>
+      </li>
+      <% end %>
+    </ul>
+	<br>
+  <button type='submit' class='button'>Cast this vote!</button>
+</form>
+</div>
+
+<p><button type='button' class='resultsbutton'><a href='/vote/results' style="color:white">See the results!</a></button></p>

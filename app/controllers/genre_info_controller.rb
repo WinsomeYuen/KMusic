@@ -1,5 +1,5 @@
 class GenreInfoController < ApplicationController
-layout 'standard'
+layout 'genrestandard'
 
   def kpop
   end

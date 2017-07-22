@@ -1,0 +1,6 @@
+<% content_for :head do %>
+<h1><%= @title %></h1>
+<% end %>
+
+<p>You cast: <%= $Choices[@vote] %></p>
+<p><button type='button' class='button'><a href='/vote/results' style="color:white">See the results!</a></button></p>

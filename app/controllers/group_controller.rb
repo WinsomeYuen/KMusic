@@ -1,5 +1,5 @@
 class GroupController < ApplicationController
-layout 'standard'
+layout 'groupsstandard'
 
    def list
       @groups = Group.all

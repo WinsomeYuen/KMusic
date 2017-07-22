@@ -16,4 +16,10 @@ Rails.application.routes.draw do
    get '/group_info/kpop' => 'genre_info#kpop', as: :kpop
    get '/group_info/trot' => 'genre_info#trot', as: :trot
    get '/group_info/hiphop' => 'genre_info#hiphop', as: :hiphop
+   get '/home/about' => 'home#about'
+   get '/home/news' => 'home#news'
+   get '/home/genre' => 'home#genre'
+   get '/vote/votes' => 'vote#votes'
+   post 'vote/cast'
+   get 'vote/results'
 end
