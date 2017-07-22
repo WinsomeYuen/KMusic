@@ -10,15 +10,16 @@ Things you may want to cover:
 * Contains MySQL database in project
 
 ## Setting up MySQL ##
-`mysql> create database kmusic_development;
+```
+mysql> create database kmusic_development;
 Query OK, 1 row affected (0.01 sec)
 
-mysql> grant all privileges on kmusic_development.*
-to 'root'@'localhost' identified by 'password';
+mysql> grant all privileges on kmusic_development.* to 'root'@'localhost' identified by 'password';
 Query OK, 0 rows affected (0.00 sec)
 
 mysql> FLUSH PRIVILEGES;
-Query OK, 0 rows affected (0.00 sec)`
+Query OK, 0 rows affected (0.00 sec)
+```
 
 You can do the same thing for two more databases kmusic_production and kmusic_test.
 
