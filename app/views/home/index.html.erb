@@ -1,0 +1,66 @@
+<% content_for :outside do %>
+<!--Slidshow-->
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src=<%= image_url('KmusicBanner.png') %> style="width:100%">
+    <div class="text">KMusic World Banner</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="http://www.koogle.tv/static/media/uploads/Megatron/low-ktv-homebanner-06.jpg" style="width:100%">
+    <div class="text">News</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<% end%>
+
+<% content_for :head do %>
+<hr width="50%">
+<h1>Welcome to KMusic World!</h1>
+<% end %>
+
+<!--Contentof page-->
+ <p>Stay tuned for new features to the site. We post new korean music content weekly to keep you up to date. There are also discounts for products and giveaways. </p>
+
+<!--Youtube Video-->
+<iframe src="https://www.youtube.com/embed/6Yp8iPrTkrA?autoplay=1"
+width="1060" height="515" frameborder="0" allowfullscreen></iframe>

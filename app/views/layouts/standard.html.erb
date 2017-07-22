@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml">
+
+   <head>
+      <meta http-equiv = "Content-Type" content = "text/html; charset = iso-8859-1" />
+      <meta http-equiv = "Content-Language" content = "en-us" />
+      <title>KMusic World</title>
+      <%= stylesheet_link_tag "style" %>
+   </head>
+
+   <body id = "group">
+	<!--Navigation bar-->
+	<ul class="topnav" id="myTopnav">
+		<li><a class="active" href="/">Home</a></li>
+		<li><a href="about">About</a></li>
+		<li><a href="news">News</a></li>
+		<li><a href="genre">Genre</a></li>
+		<li><a href="../group/list">Groups</a></li>
+		<li><a href="shop">Shop</a></li>
+		<li class="icon">
+		<a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+		</li>
+	</ul>
+		<%= yield :outside %>
+      <div id = "container">
+         <div id = "header">
+			<%= yield :head %>
+		 </div>
+         <div id = "content">
+            <%= yield -%>
+         </div>
+
+         <div id = "sidebar"></div>
+         
+      </div>
+   </body>
+   
+</html>

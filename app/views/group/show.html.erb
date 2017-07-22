@@ -1,0 +1,20 @@
+<% content_for :head do %>
+<h1>KMusic Group Info System</h1>
+<% end %>
+
+<h1><%= @group.name %></h1>
+
+<p>
+   <strong>Debut: </strong> $<%= @group.debut %><br />
+   <strong>Labels: </strong> $<%= @group.labels %><br />
+   <strong>Members: </strong> $<%= @group.members %><br />
+   <strong>Genre :</strong> <%= link_to @group.genre.name,
+	:action => "show_genres", :id => @group.genre.id %><br />
+   <strong>Created Date:</strong> <%= @group.created_at %><br />
+</p>
+
+<p><%= @group.description %></p>
+
+<hr />
+
+<%= link_to 'Back', {:action => 'list'} %>

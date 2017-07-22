@@ -1,0 +1,30 @@
+<% content_for :head do %>
+<h1>KMusic Group Info System</h1>
+<% end %>
+
+<h1>Add new Group</h1>
+
+<%= form_tag :action => 'create' do %>
+
+<p><label for = "group_name">Name</label>:
+<%= text_field 'groups', 'name' %></p>
+
+<p><label for = "group_debut">Debut</label>:
+<%= number_field 'groups', 'debut' %></p>
+
+<p><label for = "group_labels">Labels</label>:
+<%= text_field 'groups', 'labels' %></p>
+
+<p><label for = "group_memebers">Memebers</label><br/>
+<%= text_area 'groups', 'members' %></p>
+
+<p><label for = "group_genre">Genre</label>:
+<%= collection_select(:groups, :genre_id, @genres, :id, :name, prompt: true) %></p>
+
+<p><label for = "group_description">Description</label><br/>
+<%= text_area 'groups', 'description' %></p>
+
+<%= submit_tag "Create" %>
+
+<% end -%>
+<%= link_to 'Back', {:action => 'list'} %>

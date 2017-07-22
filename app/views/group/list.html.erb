@@ -1,0 +1,27 @@
+<% content_for :head do %>
+<h1>KMusic Group Info System</h1>
+<% end %>
+
+<ul id = "genres">
+   <% Genre.all.each do |c| %>
+   <li><%= link_to c.name, :action => "show_genres", :id => c.id %></li>
+   <% end %>
+</ul>
+
+<% if @groups.blank? %>
+<p>There are not any groups currently in the system.</p>
+<% else %>
+<p>These are the current groups in our system</p>
+
+<ul id = "groups">
+   <% @groups.each do |c| %>
+   <li>
+		<%= link_to c.name, {:action => 'show', :id => c.id} -%>
+		<b> <%= link_to 'Edit', {:action => "edit",:id => c.id} %></b>
+		<b> <%= link_to "Delete", {:action => 'delete', :id => c.id} %></b>
+   </li>
+   <% end %>
+</ul>
+
+<% end %>
+<p><%= link_to "Add new Group", {:action => 'new' }%></p>
