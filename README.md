@@ -23,6 +23,8 @@ Query OK, 0 rows affected (0.00 sec)
 
 You can do the same thing for two more databases kmusic_production and kmusic_test.
 
+## ##
+
 Help from sources: 
 http://guides.railsgirls.com/sinatra-app
 https://www.tutorialspoint.com/ruby-on-rails/
