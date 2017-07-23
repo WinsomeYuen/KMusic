@@ -1,9 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Originally I was working in a team of 3, however I was the only developer left in the end.
+To challenge myself and make a website I was passionate about I scrapped our origial idea and
+made this website from scratch in 3 days to present.
 
-Things you may want to cover:
+-Note: Ongoing, possibly will update in the future
+
+Things to cover:
 
 * To run in comand line type in "rails server"
 
